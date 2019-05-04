@@ -149,7 +149,8 @@ public class UserManagementService extends BaseService {
         SystemUser systemUser = new SystemUser();
         systemUser.setId(request.getUserId());
         systemUser.setUsername(request.getUsername());
-        systemUser.setPassword(String.valueOf(new Random().nextInt(900000) + 100000));
+//        systemUser.setPassword(String.valueOf(new Random().nextInt(900000) + 100000));
+        systemUser.setPassword(request.getConfirmPassword());
         systemUser.setStatus(Integer.valueOf(request.getStatus()));
         systemUser.setBadLoginAttempts(Integer.valueOf(0));
 //        systemUser.setCreatedBy(loggedInSystemUser.getUsername());
